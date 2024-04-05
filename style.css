@@ -530,7 +530,7 @@ img {
   background-color: var(--clr-semilight);
   max-width: 40rem;
   margin-top: 4rem;
-  box-shadow: rgba(100,100,111,0.2)0px 7px 29px 0px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .latestStyle_card img {
   width: 40rem;
@@ -559,81 +559,92 @@ img {
   }
 }
 
-/* CATALOG PAGE BANNER */
-.catalogBanner_bg {
+/* CATALOG BANNER */
+.catalogbanner_bg {
   background-image: linear-gradient(
       rgba(255, 255, 255, 0.5),
-      rgba(255, 255, 255, 0.5)
+      rgba(255, 255, 255, 0)
     ),
     url(./img/catalog-banner.png);
   height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
-  /* TO CENTER THE TEXT */
+
+  /* to center the text */
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
 }
 
-.catalogBanner h1 {
+.catalogbanner h1 {
   font-size: 7rem;
   font-weight: 700;
   color: var(--clr-primary);
 }
-.catalogBanner p {
+.catalogbanner p {
   font-size: 3rem;
   line-height: 2.5rem;
 }
+/* INTERIOR DESIGN PACKAGE */
 
-/* INTERIOR PACKAGE */
-
-.package_wrapper h2 {
+.package h2 {
   color: var(--clr-primary);
   font-size: 6rem;
   font-weight: 700;
   text-align: center;
   padding: 3rem;
 }
+
+.package_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .package_theme {
   padding: 5rem;
   display: flex;
-  gap: 5rem;
-  justify-content: center;
+  gap: 0.5rem;
+  max-width: 1500px;
+  width: 100%;
 }
-
-.package_left {
-  width: 500rem;
-  margin-left: 20rem;
-  margin-top: 5rem;
-}
-
 .package_left img {
-  width: 70rem;
+  width: 500rem;
+  max-width: 60rem;
 }
-.package_right h2 {
-  color: var(--clr-primary);
-  display: flex;
-  font-size: 6rem;
-  font-weight: 700;
+.package_right {
   text-align: center;
-  margin-left: 6rem;
-  height: -20px;
-}
-.package_right p {
-  font-size: 2rem;
-  line-height: 2.5rem;
+  justify-content: center;
   text-align: justify;
+  padding: 2rem;
 }
+
 .package_theme:nth-child(odd) {
   background-color: var(--clr-semilight);
   flex-direction: row-reverse;
-  display: flex;
+  justify-content: space-between;
+
+  .package_right {
+    text-align: center;
+    justify-content: center;
+    text-align: justify;
+  }
 }
 
+@media screen and (max-width: 520px) {
+  .catalogbanner {
+    flex-direction: column;
+  }
+  .package_theme {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .package_theme:nth-child(odd) {
+    flex-direction: column;
+  }
+}
 
-
-.contact {
+/* .contact { 
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
@@ -710,6 +721,204 @@ textarea:focus {
 background-color: var(--clr-dark);
 
 }
+*/
+
+/* UPDATES */
+.updates {
+  padding: 5rem 0;
+}
+.updates_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+.update_contents h2 {
+  color: var(--clr-primary);
+  font-size: 7rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+.update_contents p {
+  text-align: justify;
+}
+
+/* BUILDING DESIGN */
+.design {
+  padding: 5rem 0;
+  background-color: var(--clr-light);
+}
+.design_main h2 {
+  font-size: 4rem;
+  color: var(--clr-secondary);
+  font-weight: 700;
+}
+.design_wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 5rem;
+  gap: 5rem;
+}
+.design_cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
+}
+.cards {
+  padding: 2rem;
+  background-color: var(--clr-semilight);
+  margin-bottom: 3rem 0;
+}
+.design_sidebar h2 {
+  font-size: 4rem;
+  color: var(--clr-secondary);
+  font-weight: 700;
+}
+.design_cards h4 {
+  text-align: center;
+  font-style: 3rem;
+  font-size: 3rem;
+  padding-bottom: 2rem;
+  font-weight: 700;
+}
+.design_sidebar ul li {
+  margin-bottom: 2rem;
+  justify-content: space-between;
+  display: flex;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+.design_cards a {
+  margin-bottom: 3rem;
+  font-size: 3.5rem;
+  color: var(--clr-dark);
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+@media (max-width: 520px) {
+  .package_card {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px;
+  }
+  .package_card img {
+    display: none;
+  }
+
+  .package_card:nth-child(odd) {
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 15px;
+  }
+}
+/* CONTACT */
+/* CONTACT */
+.contactPage {
+  padding: 20rem 0;
+}
+
+.contactPage h2 {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.contactPage h1 {
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--clr-primary);
+  
+}
+.contacPage_wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+}
+.contact__form input,
+.contact__form textarea {
+  border: none;
+  background-color: var(transparent);
+  width: 100%;
+  border-bottom: 1px solid gray;
+  padding: 10px 16px;
+}
+
+.contact__form button {
+  width: 100%;
+  padding: 10px 16px;
+  background-color: var(--clr-dark);
+  color: var(--clr-light);
+  margin-top: 10px;
+  border: none;
+  border-radius: 20px;
+  font-weight: 700;
+  letter-spacing: 1rem;
+}
+.contact__info {
+  background-color: var(--clr-dark);
+  color: var(--clr-light);
+  padding: 40px;
+}
+
+.contact__info ul li {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.contact__info ul li a {
+  color: var(--clr-secondary);
+  font-size: 2.5rem;
+}
+
+@media (max-width: 520px) {
+  .contactPage {
+    flex-direction: column;
+  }
+}
+/* RECENT PROJECT */
+.recent {
+  padding: 4rem;
+}
+.recent h2 {
+  font-weight: bold;
+  font-size: 5rem;
+  text-align: center;
+  color: var(--clr-primary);
+}
+.recent_wrapper {
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr 0.5fr;
+  gap: 2rem;
+}
+.recent_wrapper img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.recent_wrapper ul {
+  display: flex;
+  justify-content: space-between;
+}
+.recent_wrapper ul li {
+  font-size: 2rem;
+  font-weight: 500;
+}
+@media screen and (max-width: 520px) {
+  .catalogBanner {
+    flex-direction: column;
+  }
+  .package_theme:nth-child(odd) {
+    flex-direction: column;
+  }
+  .package_theme {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
 /* COMPONENTS/REPEATABLE */
 .btn {
   background-color: transparent;
