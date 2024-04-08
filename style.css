@@ -395,7 +395,7 @@ img {
 
 /* CALL TO ACTION */
 .cta {
-  padding: 3rem 0;
+  padding: 2rem 0;
   background-color: var(--clr-primary);
   color: var(--clr-semilight);
 }
@@ -631,6 +631,8 @@ img {
   }
 }
 
+/* INTERIOR DESIGN MOBILE */
+
 @media screen and (max-width: 520px) {
   .catalogbanner {
     flex-direction: column;
@@ -797,27 +799,36 @@ background-color: var(--clr-dark);
   align-items: flex-end;
   justify-content: flex-end;
 }
+
+.design_card:nth-child(odd) {
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 15px;
+}
+
+/* UPDATES MOBILE */
+
 @media (max-width: 520px) {
   .package_card {
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 0 15px;
+  
   }
-  .package_card img {
-    display: none;
-  }
-
-  .package_card:nth-child(odd) {
+  .updates_wrapper {
     flex-direction: column;
-    justify-content: center;
-    padding: 0 15px;
+  }
+  .design_wrapper{
+    grid-template-columns: 1fr;
+    flex-direction: column;
+    gap: 3rem;
   }
 }
 /* CONTACT */
-/* CONTACT */
 .contactPage {
   padding: 20rem 0;
+  gap: 2rem;
 }
 
 .contactPage h2 {
@@ -829,12 +840,12 @@ background-color: var(--clr-dark);
   font-size: 40px;
   font-weight: 700;
   color: var(--clr-primary);
-  
 }
 .contacPage_wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 30px;
+  margin-bottom: 3rem;
 }
 .contact__form input,
 .contact__form textarea {
@@ -873,11 +884,13 @@ background-color: var(--clr-dark);
   color: var(--clr-secondary);
   font-size: 2.5rem;
 }
+/* CONTACT MOBILE */
 
 @media (max-width: 520px) {
   .contactPage {
     flex-direction: column;
   }
+  
 }
 /* RECENT PROJECT */
 .recent {
@@ -906,14 +919,17 @@ background-color: var(--clr-dark);
   font-size: 2rem;
   font-weight: 500;
 }
+
+/* RECENT MOBILE */
+
 @media screen and (max-width: 520px) {
   .catalogBanner {
     flex-direction: column;
   }
-  .package_theme:nth-child(odd) {
+  .recent_wrapper:nth-child(odd) {
     flex-direction: column;
   }
-  .package_theme {
+  .recent_wrapper {
     flex-direction: column;
     justify-content: center;
   }
