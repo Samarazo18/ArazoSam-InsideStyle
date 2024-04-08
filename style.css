@@ -906,10 +906,12 @@ background-color: var(--clr-dark);
 /* CONTACT MOBILE */
 
 @media (max-width: 520px) {
-  .contactPage {
+  .contacPage_wrapper{
     flex-direction: column;
+    grid-template-columns: 1fr;
+    padding: 1rem;
+
   }
-  
 }
 /* RECENT PROJECT */
 .recent {
