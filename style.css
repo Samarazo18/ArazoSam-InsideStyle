@@ -393,6 +393,95 @@ img {
   }
 }
 
+
+/* CATALOG BANNER */
+.catalogbanner_bg {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0)
+    ),
+    url(./img/catalog-banner.png);
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  /* to center the text */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.catalogbanner h1 {
+  font-size: 7rem;
+  font-weight: 700;
+  color: var(--clr-primary);
+}
+.catalogbanner p {
+  font-size: 3rem;
+  line-height: 2.5rem;
+}
+/* INTERIOR DESIGN PACKAGE */
+
+.package h2 {
+  color: var(--clr-primary);
+  font-size: 6rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 3rem;
+}
+
+.package_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.package_theme {
+  padding: 5rem;
+  display: flex;
+  gap: 0.5rem;
+  max-width: 1500px;
+  width: 100%;
+}
+.package_left img {
+  width: 500rem;
+  max-width: 60rem;
+}
+.package_right {
+  text-align: center;
+  justify-content: center;
+  text-align: justify;
+  padding: 2rem;
+}
+
+.package_theme:nth-child(odd) {
+  background-color: var(--clr-semilight);
+  flex-direction: row-reverse;
+  justify-content: space-between;
+
+  .package_right {
+    text-align: center;
+    justify-content: center;
+    text-align: justify;
+  }
+}
+
+/* INTERIOR DESIGN MOBILE */
+
+@media screen and (max-width: 520px) {
+  .catalogbanner {
+    flex-direction: column;
+  }
+  .package_theme {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .package_theme:nth-child(odd) {
+    flex-direction: column;
+  }
+}
+
+
 /* CALL TO ACTION */
 .cta {
   padding: 2rem 0;
@@ -559,77 +648,7 @@ img {
   }
 }
 
-/* CATALOG BANNER */
-.catalogbanner_bg {
-  background-image: linear-gradient(
-      rgba(255, 255, 255, 0.5),
-      rgba(255, 255, 255, 0)
-    ),
-    url(./img/catalog-banner.png);
-  height: 100vh;
-  background-size: cover;
-  background-repeat: no-repeat;
 
-  /* to center the text */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-}
-
-.catalogbanner h1 {
-  font-size: 7rem;
-  font-weight: 700;
-  color: var(--clr-primary);
-}
-.catalogbanner p {
-  font-size: 3rem;
-  line-height: 2.5rem;
-}
-/* INTERIOR DESIGN PACKAGE */
-
-.package h2 {
-  color: var(--clr-primary);
-  font-size: 6rem;
-  font-weight: 700;
-  text-align: center;
-  padding: 3rem;
-}
-
-.package_wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.package_theme {
-  padding: 5rem;
-  display: flex;
-  gap: 0.5rem;
-  max-width: 1500px;
-  width: 100%;
-}
-.package_left img {
-  width: 500rem;
-  max-width: 60rem;
-}
-.package_right {
-  text-align: center;
-  justify-content: center;
-  text-align: justify;
-  padding: 2rem;
-}
-
-.package_theme:nth-child(odd) {
-  background-color: var(--clr-semilight);
-  flex-direction: row-reverse;
-  justify-content: space-between;
-
-  .package_right {
-    text-align: center;
-    justify-content: center;
-    text-align: justify;
-  }
-}
 
 /* INTERIOR DESIGN MOBILE */
 
